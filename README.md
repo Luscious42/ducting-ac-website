@@ -26,30 +26,30 @@ Professional HVAC services website for Ducting Air Conditioning, Kingsbury, TX.
 1. Install Node.js from https://nodejs.org/
 2. Run in PowerShell:
 
-``powershell
+````powershell
 npm install
 npm start
-``
+````
 
 Opens at http://localhost:3000 with live reload.
 
 ### Option 2: Direct Browser
 
-Simply open index.html in any web browser (no server needed for basic viewing).
+Simply open `index.html` in any web browser (no server needed for basic viewing).
 
 ## Deployment to Netlify
 
 ### Step 1: Create GitHub Repository
 
 1. Go to https://github.com/new
-2. Create repo named ducting-ac-website
+2. Create repo named `ducting-ac-website`
 3. In PowerShell, from the hvac-website folder:
 
-``powershell
+````powershell
 git remote add origin https://github.com/YOUR-USERNAME/ducting-ac-website.git
 git branch -M main
 git push -u origin main
-``
+````
 
 (Replace YOUR-USERNAME with your GitHub username)
 
@@ -58,7 +58,7 @@ git push -u origin main
 1. Visit https://netlify.com and sign up (use GitHub for easiest setup)
 2. Click **Add new site** > **Import an existing project**
 3. Select **GitHub**
-4. Authorize and select ducting-ac-website repository
+4. Authorize and select `ducting-ac-website` repository
 5. Build settings:
    - **Branch:** main
    - **Build command:** (leave empty)
@@ -66,17 +66,17 @@ git push -u origin main
 6. Click **Deploy site**
 
 **Your site goes live automatically!** Netlify assigns a URL like:
-https://your-site-name.netlify.app
+`https://your-site-name.netlify.app`
 
 ### Step 3: Auto-Updates
 
 Every time you push to GitHub:
 
-``powershell
+````powershell
 git add .
 git commit -m "Update services"
 git push origin main
-``
+````
 
 Netlify automatically rebuilds and deploys your changes within seconds.
 
@@ -93,7 +93,7 @@ Netlify automatically rebuilds and deploys your changes within seconds.
 
 Edit **config.js**:
 
-``javascript
+````javascript
 export const config = {
   businessName: 'Ducting Air Conditioning',
   phone: '(830) 832-7240',
@@ -102,24 +102,24 @@ export const config = {
   address: '7420 #22 Wilke Rd, Kingsbury, TX 78638',
   addressHref: 'https://maps.google.com/?q=...'
 };
-``
+````
 
 ### Change Colors
 
-Edit **styles.css** (:root section):
+Edit **styles.css** (`:root` section):
 
-``css
+````css
 :root {
   --accent: #0077cc;        /* Main blue */
   --accent-dark: #005a99;   /* Darker blue */
   --dark: #222;             /* Text color */
   --muted: #666;            /* Secondary text */
 }
-``
+````
 
 ### Add/Edit Services
 
-Edit **services.html** and add new service cards in the .services-grid section.
+Edit **services.html** and add new service cards in the `.services-grid` section.
 
 ## Features
 
