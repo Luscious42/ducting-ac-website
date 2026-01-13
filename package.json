@@ -1,0 +1,14 @@
+﻿{
+  "name": "ducting-ac-website",
+  "version": "1.0.0",
+  "description": "Professional HVAC website for Ducting Air Conditioning",
+  "private": true,
+  "scripts": {
+    "start": "lite-server",
+    "build": "echo This is a static site. No build step required."
+  },
+  "keywords": ["hvac", "air-conditioning", "heating", "kingsbury"],
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
