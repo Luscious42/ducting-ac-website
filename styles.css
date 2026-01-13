@@ -1,10 +1,11 @@
 ﻿:root {
-  --accent: #0077cc;
-  --accent-dark: #005a99;
-  --dark: #222;
-  --muted: #666;
-  --light-bg: #f9f9f9;
-  --border: #eee;
+  --accent: #0ea5ff;
+  --accent-dark: #0077cc;
+  --dark: #e6eef6;
+  --muted: #9aa4ad;
+  --light-bg: #0b0f13;
+  --card-bg: #0f1519;
+  --border: #182028;
 }
 
 * {
@@ -19,8 +20,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   color: var(--dark);
+  background: radial-gradient(circle at 10% 10%, #071018 0%, var(--light-bg) 40%);
   line-height: 1.6;
-  background: #fff;
 }
 
 .container {
@@ -29,9 +30,10 @@ body {
   padding: 1rem;
 }
 
+/* Header & Navigation */
 .site-header {
-  background: #fff;
-  border-bottom: 2px solid var(--border);
+  background: rgba(6,10,14,0.9);
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -61,7 +63,7 @@ nav a {
   color: var(--muted);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: color 0.15s;
 }
 
 nav a:hover,
@@ -69,11 +71,12 @@ nav a[aria-current="page"] {
   color: var(--accent);
 }
 
+/* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+  background: linear-gradient(135deg, rgba(3,9,18,0.85) 0%, rgba(6,22,32,0.85) 100%);
   padding: 4rem 0;
   text-align: center;
-  border-bottom: 2px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .hero h2 {
@@ -88,27 +91,24 @@ nav a[aria-current="page"] {
   margin-bottom: 1.5rem;
 }
 
+/* Buttons & CTAs */
 .cta {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   background: var(--accent);
-  color: #fff;
+  color: #021622;
   border: none;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.12s, transform 0.12s;
   font-size: 1rem;
 }
 
 .cta:hover {
   background: var(--accent-dark);
   transform: translateY(-2px);
-}
-
-.cta:active {
-  transform: translateY(0);
 }
 
 .link-arrow {
@@ -121,6 +121,7 @@ nav a[aria-current="page"] {
   text-decoration: underline;
 }
 
+/* Sections */
 .services-preview,
 .about {
   padding: 2rem 0;
@@ -141,15 +142,15 @@ nav a[aria-current="page"] {
 }
 
 .grid article {
-  background: var(--light-bg);
+  background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid var(--border);
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.15s;
 }
 
 .grid article:hover {
-  box-shadow: 0 4px 12px rgba(0, 119, 204, 0.1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
 }
 
 .grid article h4 {
@@ -173,9 +174,10 @@ nav a[aria-current="page"] {
   margin-bottom: 0.5rem;
 }
 
+/* CTA Banner */
 .cta-banner {
-  background: linear-gradient(135deg, #0077cc 0%, #005a99 100%);
-  color: #fff;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: #01121a;
   padding: 3rem 0;
   text-align: center;
   margin: 3rem 0 0;
@@ -187,14 +189,15 @@ nav a[aria-current="page"] {
 }
 
 .cta-banner .cta {
-  background: #fff;
+  background: #021622;
   color: var(--accent);
 }
 
 .cta-banner .cta:hover {
-  background: var(--light-bg);
+  background: rgba(2,22,34,0.9);
 }
 
+/* Services Grid */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -203,7 +206,7 @@ nav a[aria-current="page"] {
 }
 
 .service-card {
-  background: var(--light-bg);
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 8px;
   border-left: 4px solid var(--accent);
@@ -236,6 +239,7 @@ nav a[aria-current="page"] {
   font-weight: bold;
 }
 
+/* Form */
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -258,7 +262,9 @@ textarea {
   border-radius: 4px;
   font-family: inherit;
   font-size: 1rem;
-  transition: border-color 0.2s;
+  background: #071014;
+  color: var(--dark);
+  transition: border-color 0.12s, box-shadow 0.12s;
 }
 
 input[type="text"]:focus,
@@ -268,12 +274,13 @@ select:focus,
 textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.1);
+  box-shadow: 0 0 0 4px rgba(14,165,255,0.08);
 }
 
+/* Footer */
 .site-footer {
-  background: var(--light-bg);
-  border-top: 2px solid var(--border);
+  background: rgba(6,10,14,0.95);
+  border-top: 1px solid var(--border);
   padding: 2rem 0;
   color: var(--muted);
   margin-top: 3rem;
@@ -321,6 +328,7 @@ textarea:focus {
   font-size: 0.95rem;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .site-header .container {
     flex-direction: column;
@@ -417,7 +425,7 @@ textarea:focus {
   }
 
   .site-header {
-    border-bottom-width: 3px;
+    border-bottom-width: 2px;
   }
 
   .cta {
